@@ -14,6 +14,7 @@ function makeList() {
       url: "week3/index.html"
     },
     {
+      //week4
       label: "Week4 notes",
       url: "week4/index.html"
     }
