@@ -1,0 +1,41 @@
+#board {
+  width: 300px;
+  height: 300px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.square {
+  background-color: #ddd;
+  margin: 2px;
+  width: 30%;
+  height: 30%;
+  font-size: 20vw;
+  text-align: center;
+}
+
+.resetBtn {
+  width: 100px;
+  height: 20px;
+  margin-top: 20px;
+  background-color: #ddd;
+  text-align: center;
+}
+
+#board > div:nth-child(1),
+#board > div:nth-child(4),
+#board > div:nth-child(7),
+#board > div:nth-child(2),
+#board > div:nth-child(5),
+#board > div:nth-child(8) {
+  border-right: 5px solid #000;
+}
+
+#board > div:nth-child(1),
+#board > div:nth-child(2),
+#board > div:nth-child(3),
+#board > div:nth-child(4),
+#board > div:nth-child(5),
+#board > div:nth-child(6) {
+  border-bottom: 5px solid #000;
+}

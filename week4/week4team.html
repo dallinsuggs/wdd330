@@ -1,0 +1,40 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Dallin's Portfolio</title>
+  <meta name="description" content="A collection of links to Dallin Suggs' work in the class WDD 330.">
+
+  <link rel="stylesheet" href="../css/tictactoe.css?v=1.0">
+  <script type = "text/javascript" src = "../js/tictactoe.js"></script>
+  
+
+</head>
+
+<body>
+  <h2>Note: This page uses 'ontouchend' which only works on mobile devices</h2>
+
+  <h1>Tic Tac Toe Board</h1>
+
+  <h3 id="turn">Player :: 1</h3>
+
+  <div id="board" ontouchend="Touched(event)">
+    <div class="square" id="sq-1"></div>
+    <div class="square" id="sq-2"></div>
+    <div class="square" id="sq-3"></div>
+
+    <div class="square" id="sq-4"></div>
+    <div class="square" id="sq-5"></div>
+    <div class="square" id="sq-6"></div>
+
+    <div class="square" id="sq-7"></div>
+    <div class="square" id="sq-8"></div>
+    <div class="square" id="sq-9"></div>
+  </div>
+
+  <div class="resetBtn" onclick="reset()">Reset</div>
+</body>
+</html>
