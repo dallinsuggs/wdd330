@@ -22,6 +22,11 @@ function makeList() {
       //week5
       label: "Week5 notes",
       url: "week5/index.html"
+    },
+    {
+      //week6
+      label: "Week6: Challenge 1",
+      url: "challege1/index.html"
     }
   ],
   // Make the list

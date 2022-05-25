@@ -1,0 +1,36 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Dallin's Portfolio</title>
+  <meta name="description" content="A collection of links to Dallin Suggs' work in the class WDD 330.">
+
+  <link rel="stylesheet" href="../css/challenge1.css?v=1.0">
+  
+
+</head>
+
+<body onload="loadUp()">
+
+  <h1>To Do List</h1>
+
+  <div id="toDoWindow">
+    <div id="toDoList">
+    </div>
+    <div id="listFooter">
+      <div id="tasksLeft"></div>
+      <div id="tasksAll" class="grow" onclick="filterList(this)">All</div>
+      <div id="tasksActive" class="grow" onclick="filterList(this)">Active</div>
+      <div id="tasksCompleted" class="grow" onclick="filterList(this)">Completed</div>
+    </div>
+  </div>
+  <div id="addField">
+    <input type="text" id="addInput">
+    <div id="addBtn" class="grow" onclick="addToDo()">+</div>
+  </div>
+</body>
+<script type = "text/javascript" src = "../js/challenge1.js"></script>
+</html>
