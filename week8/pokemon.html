@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 8 Team Assignment</title>
+</head>
+<body>
+    <h2>Week 8 Team Assignment</h2>
+    <div id="output"></div>
+    <div class="buttons">
+        <button class="button" id="prev" onclick="displayPokemon('prev')">Prev</button>
+        <button class="button" id="next"  onclick="displayPokemon('next')">Next</button>
+    </div>
+    <script>
+        const queryUrl = "https://pokeapi.co/api/v2/pokemon?limit=90";
+        let start = 0;
+        let end = 9;
+        function displayPokemon(prevNext) {
+            if (prevNext == 'prev') {
+                if (start == 9) {
+                    start = 79;
+                    end = 89;
+                } else {
+                    start -= 10;
+                    end -= 10;
+                }
+            } 
+            if (prevNext == 'next') {
+                if (start == 80) {
+                    start = 0;
+                    end = 9;
+                } else {
+                    start += 10;
+                    end += 10;
+                }
+            }
+            console.log('start: ' + start);
+            console.log('end: ' + end);
+            fetch(queryUrl)
+            .then(function (response) { return response.json(); })
+            .then(function (jsonObject) {
+                const outputDiv = document.getElementById('output');
+                outputDiv.innerHTML = "";
+                for (let i = start; i < end; i++) {
+                    let e = document.createElement('div');
+                    e.setAttribute('class', 'pokemon');
+                    e.appendChild(document.createTextNode(jsonObject.results[i].name));
+                    outputDiv.appendChild(e);
+                }
+            });
+        }
+        displayPokemon();
+    </script>
+</body>
+</html>
