@@ -1,0 +1,187 @@
+body {
+  background-color: white;
+}
+
+.flex-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.pokemon, .listItem, .listItem2 {
+  min-height: 2em;
+  font-size: 1.5em;
+  border-bottom: 4px solid #F07575;
+  display: flex;
+  align-items: center;
+  text-indent: 5px;
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.listItem {
+  max-height: 1.5em;
+  font-size: 1.3em;
+}
+
+.listItem2 {
+  font-size: 2em;
+  
+}
+
+.xBox {
+  color: #F07575;
+  margin-left: auto;
+  margin-right: .3em;
+  cursor: pointer;
+  border: 2px solid #F07575;
+  padding: 3px;
+  background-color: #FFFF9E;
+  text-align: center;
+  text-indent: 0px;
+  width: 2em;
+}
+
+.addBtn {
+  color: #F07575;
+  margin-left: auto;
+  margin-right: .3em;
+  cursor: pointer;
+  font-weight: 900;
+  font-size: 1.5em;
+  border: 2px solid #F07575;
+  border-radius: 3px;
+  line-height: 80%;
+}
+
+#pokemon-browser, #team-creator, #team-viewer {
+  border: 4px solid #F07575;
+  border-radius: 10px;
+}
+
+#pokemon-browser {
+  background-color: #FFFF9E;
+}
+
+#team-creator, #pokemon-browser {
+  min-height: 41em;
+  width: 95%;
+  margin: 2px;
+  position: relative;
+}
+
+.save-button {
+  position: absolute;
+  width: 100%;
+  bottom: 3px;
+  display: flex;
+  justify-content: space-around;
+}
+
+#team-viewer {
+  width: 95%;
+}
+
+.button {
+  border: 4px solid #F07575;
+  border-radius: 10px;
+  text-align: center;
+  font-size: 3em;
+  color: #F07575;
+  cursor: pointer;
+  background-color: #FFFF9E;
+  margin-top: 4px;
+}
+
+.saveButton {
+  border: 4px solid #F07575;
+  border-radius: 10px;
+  text-align: center;
+  font-size: 1.5em;
+  color: #F07575;
+  cursor: pointer;
+  background-color: #FFFF9E;
+  margin-top: 4px;
+  margin-bottom: 4px;
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-around;
+}
+
+.grow { 
+  transition: all .2s ease-in-out; 
+}
+
+.grow:hover { 
+  transform: scale(.85); 
+}
+
+#big-title {
+  border: 4px solid #F07575;
+  border-radius: 10px;
+  max-width: 95%;
+  background-color: #FFFF9E;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.window-title {
+  min-height: 2em;
+  font-size: 2em;
+  border-bottom: 4px solid #F07575;
+  text-indent: 5px;
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  margin-bottom: 0px;
+}
+
+#team-name, #name-label {
+  font-size: 1em;
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  max-width: 7em;
+  max-height: 2em;
+}
+
+.error {
+  border-radius: 3px;
+  border-color: #e52213;
+  background-color: pink;
+  transition: 400ms;
+}
+
+.teamItem {
+  min-width: 15em;
+}
+
+@media (min-width: 700px) {
+  .flex-container {
+    flex-direction: row;
+    flex-wrap: wrap;
+    flex-basis: 50%;
+    justify-content: center;
+  }
+
+  #team-creator, #pokemon-browser {
+    width: 47%;
+    margin: 5px;
+  }
+
+  .saveButton {
+    border: 4px solid #F07575;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 1.5em;
+    color: #F07575;
+    cursor: pointer;
+    background-color: #FFFF9E;
+    margin-top: 4px;
+  }
+  
+  #team-name, #name-label {
+    font-size: 1.5em;
+    width: auto;
+    max-height: 2em;
+  }
+  
+}

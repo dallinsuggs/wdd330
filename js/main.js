@@ -47,6 +47,11 @@ function makeList() {
       //week10
       label: "Week10 notes",
       url: "week10/index.html"
+    },
+    {
+      //challenge2
+      label: "Pokemon API Project (Block 2)",
+      url: "Block 2 Challenge Project/pokemon.html"
     }
   ],
   // Make the list

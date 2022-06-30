@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokemon Team Creator</title>
+
+    <link rel="stylesheet" href="../css/pokemon.css?v=1.0">
+</head>
+<body onload="loadUp()">
+  <div id="big-title">
+    <h2>Pokemon Team Creator</h2>
+  </div>
+  <div class="flex-container">
+    <div id="pokemon-browser">
+      <h2 class="window-title">Pokemons</h2>
+      <div id="output"></div>
+      <div class="buttons">
+          <button class="button grow" id="prev" onclick="displayPokemon('prev')">Prev</button>
+          <button class="button grow" id="next"  onclick="displayPokemon('next')">Next</button>
+      </div>
+    </div>
+    <div id="team-creator">
+      <h2 class="window-title">Team Editor</h2>
+      <div id="creator-content">
+        <p class="listItem">Click an arrow to add a pokemon.</p>
+      </div>
+      <div class="save-button">
+        <label id="name-label" for="team-name">Team Name:</label>
+        <input type="text" id="team-name" name="team-name" title="Entering an already existing team name overwrites previous team of that name.">
+        <button class="saveButton grow" id="save" onclick="saveTeam()">Save Team</button>
+      </div>
+    </div>
+    <div id="team-viewer">
+      <h2 class="window-title">Saved Teams<br><span>(click team to edit)</span></h2>
+      <div id="team-viewer-content">
+        <p class="listItem">Saved teams will show here.</p>
+      </div>
+    </div>
+  </div>
+
+  <script type = "text/javascript" src = "../js/pokemon.js"></script>
+</body>
+</html>
