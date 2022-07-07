@@ -68,7 +68,7 @@ displayPokemon();
 
 //Adds a pokemon to the team creator window on the right side of the desktop view
 function addPokemon(element) {
-  if (currentTeam.length < 10) {
+  if (currentTeam.length < 6) {
     let teamMember = element.parentNode.childNodes[0];
     currentTeam.push(teamMember.textContent);
     console.log(currentTeam);
@@ -240,11 +240,13 @@ function deleteTeam(element) {
 
 // Edit team
 function editTeam(element) {
+  saveTeam();
   let teamName = element.parentNode.childNodes[0].textContent;
   for (let i = 0; i < pokemonTeams.length; i++) {
     if (pokemonTeams[i][0] == teamName) {
       currentTeam = pokemonTeams[i][1];
       document.getElementById('team-name').value = pokemonTeams[i][0];
+      pokemonTeams.splice(i, 1);
 
       makeCurrentTeam();
     }
